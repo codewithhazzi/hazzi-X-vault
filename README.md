@@ -1,36 +1,140 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚧 Hazzi X Vault - Under Development
 
-## Getting Started
+> Your Ultimate Toolkit for Digital Operations
 
-First, run the development server:
+[![Status](https://img.shields.io/badge/status-under%20development-yellow)](https://github.com)
+[![Next.js](https://img.shields.io/badge/Next.js-16.1.6-black)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-4.0-38bdf8)](https://tailwindcss.com/)
+
+## 🔥 Overview
+
+Hazzi X Vault is a comprehensive digital toolkit platform providing 60+ premium tools for developers, designers, and digital professionals. Access everything from SEO tools to document generators, all in one beautiful, modern interface.
+
+**⚠️ Note:** This project is currently under active development. Features and functionality may change.
+
+## ✨ Features
+
+### 🎯 Core Features
+- **60+ Premium Tools** - SEO, Document, Image, Social, and Utility tools
+- **Modern Dashboard** - Beautiful, intuitive interface with real-time statistics
+- **Pro Tools Suite** - Advanced tools for professionals (BIN Generator, Card Validators, ID Generators)
+- **VIP Membership** - Exclusive benefits and early access to new features
+- **Responsive Design** - Works seamlessly on desktop, tablet, and mobile
+
+### 🛠️ Tool Categories
+- **SEO Tools (9)** - Meta Tags, Keyword Density, Slug Generator, Schema Markup, etc.
+- **Telegram/Discord (5)** - Webhook Sender, Invite Generator, Embed Builder
+- **Utility Tools (14)** - Password Generator, QR Code, Hash Generator, UUID, etc.
+- **Document Tools (5)** - Resume Builder, Invoice Generator, Certificate Maker
+- **Image Tools (5)** - Compressor, Resizer, Watermark, Base64 Converter
+- **Social Tools (6)** - Fake Tweet, Bio Generator, Hashtag Generator
+
+## 🚀 Tech Stack
+
+- **Framework:** Next.js 16.1.6 (App Router)
+- **Language:** TypeScript 5
+- **Styling:** Tailwind CSS 4, tw-animate-css
+- **UI Components:** Radix UI, shadcn/ui
+- **Icons:** Lucide React
+- **Dev Tools:** Turbopack, ESLint
+
+## 📦 Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/yourusername/hazzi-x-vault.git
+
+# Navigate to project directory
+cd hazzi-x-vault
+
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🎨 Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+hazzi-x-vault/
+├── src/
+│   ├── app/                # Next.js app directory
+│   │   ├── dashboard/      # Dashboard page
+│   │   ├── login/          # Login page
+│   │   ├── signup/         # Signup page
+│   │   ├── layout.tsx      # Root layout
+│   │   └── page.tsx        # Home page (redirects to dashboard)
+│   ├── components/         # React components
+│   │   ├── ui/             # shadcn/ui components
+│   │   ├── header.tsx      # Header with navigation
+│   │   ├── sidebar.tsx     # Collapsible sidebar
+│   │   └── app-layout.tsx  # Main app layout
+│   └── lib/                # Utility functions
+├── public/                 # Static assets
+└── package.json
+```
 
-## Learn More
+## 🎯 Available Scripts
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run dev      # Start development server
+npm run build    # Build for production
+npm start        # Start production server
+npm run lint     # Run ESLint
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🔧 Current Development Status
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### ✅ Completed
+- [x] Authentication UI (Login/Signup pages)
+- [x] Dashboard with statistics
+- [x] Responsive header with sidebar toggle
+- [x] Collapsible sidebar navigation with all categories
+- [x] Tool categories structure (60+ tools planned)
+- [x] Modern UI with shadcn components
+- [x] Responsive design
 
-## Deploy on Vercel
+### 🚧 In Progress
+- [ ] Tool functionality implementation
+- [ ] User authentication backend
+- [ ] Database integration
+- [ ] VIP membership system
+- [ ] Search functionality
+- [ ] Favorites system
+- [ ] Recently used tracking
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 📋 Planned Features
+- [ ] API integrations for tools
+- [ ] User dashboard customization
+- [ ] Analytics and insights
+- [ ] Dark mode toggle
+- [ ] Multi-language support
+- [ ] Export/Import functionality
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🤝 Contributing
+
+This project is currently under active development. Contributions, issues, and feature requests are welcome!
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 👤 Author
+
+**Hazzi**
+- Website: [Hazzi X Vault](https://hazzixvault.com)
+
+## 📧 Contact
+
+For questions or feedback, please reach out:
+- Email: contact@hazzixvault.com
+- GitHub Issues: [Create an issue](https://github.com/yourusername/hazzi-x-vault/issues)
+
+---
+
+<p align="center">Made with ❤️ by Hazzi</p>
+<p align="center">⚠️ Under Active Development - Stay Tuned! ⚠️</p>
