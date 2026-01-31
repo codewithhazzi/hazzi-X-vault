@@ -34,7 +34,11 @@ export default function Dashboard() {
                     <div className="text-center space-y-4">
                         <div className="space-y-2">
                             <p className="text-sm text-muted-foreground">Welcome to</p>
-                            <h1 className="text-4xl font-bold tracking-tight">Hazzi X Vault</h1>
+                            <h1 className="text-4xl font-bold tracking-tight">
+                                <span className="text-[#FDB532]">Hazzi</span>
+                                <span className="text-white"> X </span>
+                                <span className="text-[#FDB532]">Vault</span>
+                            </h1>
                             <p className="text-xl text-muted-foreground">Your Ultimate Toolkit</p>
                         </div>
                         <p className="text-muted-foreground max-w-2xl mx-auto">

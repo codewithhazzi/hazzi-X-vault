@@ -15,7 +15,7 @@ import Link from "next/link"
 
 export function Header({ sidebarOpen = true, onToggleSidebar }: HeaderProps) {
     return (
-        <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+        <header className="sticky top-0 z-40 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60" style={{ borderBottom: '3px solid rgb(253, 181, 50) !important' }}>
             <div className="flex h-16 items-center px-4">
                 <div className="flex items-center gap-4">
                     {/* Mobile menu toggle */}
@@ -26,7 +26,7 @@ export function Header({ sidebarOpen = true, onToggleSidebar }: HeaderProps) {
                                 <span className="sr-only">Toggle menu</span>
                             </Button>
                         </SheetTrigger>
-                        <SheetContent side="left" className="p-0 w-72">
+                        <SheetContent side="left" className="p-0 w-72 overflow-y-auto">
                             <Sidebar />
                         </SheetContent>
                     </Sheet>
@@ -48,14 +48,18 @@ export function Header({ sidebarOpen = true, onToggleSidebar }: HeaderProps) {
                         </Button>
                     )}
 
-                    <h1 className="text-xl font-bold">Hazzi X Vault</h1>
+                    <h1 className="text-xl font-bold">
+                        <span className="text-[#FDB532]">Hazzi</span>
+                        <span className="text-white"> X </span>
+                        <span className="text-[#FDB532]">Vault</span>
+                    </h1>
                 </div>
 
                 <div className="flex-1" />
 
                 <div className="flex items-center gap-4">
                     <Link href="/login">
-                        <Button variant="ghost">Login</Button>
+                        <Button variant="outline">Login</Button>
                     </Link>
                     <Link href="/signup">
                         <Button>Sign Up</Button>

@@ -25,6 +25,7 @@ export function AppLayout({ children }: AppLayoutProps) {
                         "hidden md:block border-r h-[calc(100vh-4rem)] sticky top-16 transition-all duration-300 overflow-auto",
                         sidebarOpen ? "w-72" : "w-0"
                     )}
+                    style={{ scrollbarWidth: 'thin', scrollbarColor: 'rgb(253, 181, 50) rgba(253, 181, 50, 0.1)' }}
                 >
                     <Sidebar />
                 </aside>
