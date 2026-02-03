@@ -40,22 +40,8 @@ body {
 }
 
 @layer base {
-
   /* Remove borders from most elements */
-  div,
-  main,
-  aside,
-  section,
-  article,
-  nav,
-  span,
-  p,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
+  div, main, aside, section, article, nav, span, p, h1, h2, h3, h4, h5, h6 {
     border: none !important;
   }
 
@@ -78,7 +64,7 @@ aside {
   scrollbar-color: rgb(253, 181, 50) rgba(253, 181, 50, 0.1) !important;
 }
 
-/* Webkit scrollbar styling */
+/* Webkit scrollbar styling for sidebar */
 aside::-webkit-scrollbar {
   width: 10px !important;
   display: block !important;
@@ -95,4 +81,28 @@ aside::-webkit-scrollbar-thumb {
 
 aside::-webkit-scrollbar-thumb:hover {
   background: rgb(253, 200, 80) !important;
+}
+
+/* Body/Browser scrollbar - yellow */
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+  background: rgba(253, 181, 50, 0.1);
+}
+
+body::-webkit-scrollbar-thumb {
+  background: rgb(253, 181, 50);
+  border-radius: 6px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: rgb(253, 200, 80);
+}
+
+/* Firefox scrollbar for all elements */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(253, 181, 50) rgba(253, 181, 50, 0.1);
 }

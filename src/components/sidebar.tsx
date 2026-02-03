@@ -33,10 +33,10 @@ const mainNavItems = [
 ]
 
 const proToolsItems = [
-    { title: "BIN Generator", href: "/pro-tools/bin-generator" },
-    { title: "Card Formatter", href: "/pro-tools/card-formatter" },
-    { title: "Card Validator", href: "/pro-tools/card-validator" },
-    { title: "Live Checker", href: "/pro-tools/live-checker" },
+    { title: "BIN Generator", href: "/tools/bin-generator" },
+    { title: "Card Formatter", href: "/tools/card-formatter" },
+    { title: "Card Validator", href: "/tools/card-validator" },
+    { title: "Live Checker", href: "/tools/live-checker" },
     { title: "Student ID", href: "/pro-tools/student-id" },
     { title: "Driver License", href: "/pro-tools/driver-license" },
     { title: "Employee ID", href: "/pro-tools/employee-id" },
@@ -82,15 +82,15 @@ const categories = [
         icon: Search,
         count: 9,
         items: [
-            { title: "Meta Tags", href: "/seo/meta-tags" },
-            { title: "Keyword Density", href: "/seo/keyword-density" },
-            { title: "Slug Generator", href: "/seo/slug-generator" },
-            { title: "Robots.txt", href: "/seo/robots-txt" },
-            { title: "Sitemap", href: "/seo/sitemap" },
-            { title: "Open Graph", href: "/seo/open-graph" },
-            { title: "Schema Markup", href: "/seo/schema-markup" },
-            { title: "Word Counter", href: "/seo/word-counter" },
-            { title: "Text Spinner", href: "/seo/text-spinner" },
+            { title: "Meta Tags", href: "/tools/meta-tags" },
+            { title: "Keyword Density", href: "/tools/keyword-density" },
+            { title: "Slug Generator", href: "/tools/slug-generator" },
+            { title: "Robots.txt", href: "/tools/robots-txt" },
+            { title: "Sitemap", href: "/tools/sitemap" },
+            { title: "Open Graph", href: "/tools/open-graph" },
+            { title: "Schema Markup", href: "/tools/schema-markup" },
+            { title: "Word Counter", href: "/tools/word-counter" },
+            { title: "Text Spinner", href: "/tools/text-spinner" },
         ]
     },
     {

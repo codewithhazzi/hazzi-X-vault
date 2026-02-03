@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { AppLayout } from "@/components/app-layout"
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -18,17 +19,17 @@ const proTools = {
     pricing: "$1.99/mo",
     count: 11,
     tools: [
-        { name: "BIN Generator", description: "Generate from BIN", isNew: false },
-        { name: "Card Formatter", description: "Format card numbers", isNew: true },
-        { name: "Card Validator", description: "Luhn algorithm check", isNew: true },
-        { name: "Live Checker", description: "Check card status", isNew: true },
-        { name: "Student ID", description: "Student ID cards", isNew: false },
-        { name: "Driver License", description: "Driver licenses", isNew: true },
-        { name: "Employee ID", description: "Corporate IDs", isNew: true },
-        { name: "Press ID", description: "Media credentials", isNew: true },
-        { name: "Membership Card", description: "Club memberships", isNew: true },
-        { name: "Visitor Pass", description: "Guest passes", isNew: true },
-        { name: "Vaulted Student Slip", description: "South Asia fee slips", isNew: true },
+        { name: "BIN Generator", description: "Generate from BIN", isNew: false, href: "/tools/bin-generator" },
+        { name: "Card Formatter", description: "Format card numbers", isNew: true, href: "/tools/card-formatter" },
+        { name: "Card Validator", description: "Luhn algorithm check", isNew: true, href: "/tools/card-validator" },
+        { name: "Live Checker", description: "Check card status", isNew: true, href: "/tools/live-checker" },
+        { name: "Student ID", description: "Student ID cards", isNew: false, href: "#" },
+        { name: "Driver License", description: "Driver licenses", isNew: true, href: "#" },
+        { name: "Employee ID", description: "Corporate IDs", isNew: true, href: "#" },
+        { name: "Press ID", description: "Media credentials", isNew: true, href: "#" },
+        { name: "Membership Card", description: "Club memberships", isNew: true, href: "#" },
+        { name: "Visitor Pass", description: "Guest passes", isNew: true, href: "#" },
+        { name: "Vaulted Student Slip", description: "South Asia fee slips", isNew: true, href: "#" },
     ]
 }
 
@@ -38,13 +39,13 @@ const toolCategories = [
         icon: Search,
         count: 9,
         tools: [
-            { name: "Meta Tags", description: "Generate meta tags", isNew: true },
-            { name: "Keyword Density", description: "Analyze keywords", isNew: true },
-            { name: "Slug Generator", description: "URL-friendly slugs", isNew: true },
-            { name: "Robots.txt", description: "Generate robots.txt", isNew: true },
-            { name: "Sitemap", description: "XML sitemap creator", isNew: true },
-            { name: "Open Graph", description: "OG tags generator", isNew: true },
-            { name: "Schema Markup", description: "JSON-LD generator", isNew: true },
+            { name: "Meta Tags", description: "Generate meta tags", isNew: true, href: "/tools/meta-tags" },
+            { name: "Keyword Density", description: "Analyze keywords", isNew: true, href: "/tools/keyword-density" },
+            { name: "Slug Generator", description: "URL-friendly slugs", isNew: true, href: "/tools/slug-generator" },
+            { name: "Robots.txt", description: "Generate robots.txt", isNew: true, href: "/tools/robots-txt" },
+            { name: "Sitemap", description: "XML sitemap creator", isNew: true, href: "/tools/sitemap" },
+            { name: "Open Graph", description: "OG tags generator", isNew: true, href: "/tools/open-graph" },
+            { name: "Schema Markup", description: "JSON-LD generator", isNew: true, href: "/tools/schema-markup" },
             { name: "Word Counter", description: "Count words & chars", isNew: true },
             { name: "Text Spinner", description: "Rewrite content", isNew: true },
         ]
@@ -152,17 +153,19 @@ export default function AllToolsPage() {
                         </div>
                         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                             {proTools.tools.map((tool) => (
-                                <Card key={tool.name} className="hover:shadow-lg transition-shadow cursor-pointer">
-                                    <CardHeader>
-                                        <div className="flex items-start justify-between">
-                                            <CardTitle className="text-lg">{tool.name}</CardTitle>
-                                            {tool.isNew && (
-                                                <Badge variant="secondary">NEW</Badge>
-                                            )}
-                                        </div>
-                                        <CardDescription>{tool.description}</CardDescription>
-                                    </CardHeader>
-                                </Card>
+                                <Link key={tool.name} href={tool.href}>
+                                    <Card className="hover:shadow-lg transition-shadow cursor-pointer h-full">
+                                        <CardHeader>
+                                            <div className="flex items-start justify-between">
+                                                <CardTitle className="text-lg">{tool.name}</CardTitle>
+                                                {tool.isNew && (
+                                                    <Badge variant="secondary">NEW</Badge>
+                                                )}
+                                            </div>
+                                            <CardDescription>{tool.description}</CardDescription>
+                                        </CardHeader>
+                                    </Card>
+                                </Link>
                             ))}
                         </div>
                     </div>
@@ -177,17 +180,33 @@ export default function AllToolsPage() {
                             </div>
                             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                                 {category.tools.map((tool) => (
-                                    <Card key={tool.name} className="hover:shadow-lg transition-shadow cursor-pointer">
-                                        <CardHeader>
-                                            <div className="flex items-start justify-between">
-                                                <CardTitle className="text-lg">{tool.name}</CardTitle>
-                                                {tool.isNew && (
-                                                    <Badge variant="secondary">NEW</Badge>
-                                                )}
-                                            </div>
-                                            <CardDescription>{tool.description}</CardDescription>
-                                        </CardHeader>
-                                    </Card>
+                                    tool.href ? (
+                                        <Link key={tool.name} href={tool.href}>
+                                            <Card className="hover:shadow-lg transition-shadow cursor-pointer h-full">
+                                                <CardHeader>
+                                                    <div className="flex items-start justify-between">
+                                                        <CardTitle className="text-lg">{tool.name}</CardTitle>
+                                                        {tool.isNew && (
+                                                            <Badge variant="secondary">NEW</Badge>
+                                                        )}
+                                                    </div>
+                                                    <CardDescription>{tool.description}</CardDescription>
+                                                </CardHeader>
+                                            </Card>
+                                        </Link>
+                                    ) : (
+                                        <Card key={tool.name} className="hover:shadow-lg transition-shadow cursor-pointer">
+                                            <CardHeader>
+                                                <div className="flex items-start justify-between">
+                                                    <CardTitle className="text-lg">{tool.name}</CardTitle>
+                                                    {tool.isNew && (
+                                                        <Badge variant="secondary">NEW</Badge>
+                                                    )}
+                                                </div>
+                                                <CardDescription>{tool.description}</CardDescription>
+                                            </CardHeader>
+                                        </Card>
+                                    )
                                 ))}
                             </div>
                         </div>
