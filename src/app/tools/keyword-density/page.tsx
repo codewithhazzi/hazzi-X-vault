@@ -119,22 +119,22 @@ export default function KeywordDensityPage() {
                             <CardTitle>Text Input</CardTitle>
                             <CardDescription>Paste your content to analyze</CardDescription>
                         </CardHeader>
-                        <CardContent className="space-y-3">
+                        <CardContent className="space-y-2">
                             {/* Text Area */}
-                            <div className="space-y-2">
+                            <div className="space-y-1">
                                 <label className="text-sm font-medium">Content</label>
                                 <textarea
                                     placeholder="Paste your article or content here..."
                                     value={text}
                                     onChange={(e) => setText(e.target.value)}
-                                    className="flex min-h-[150px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring resize-none"
+                                    className="flex min-h-[100px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring resize-none"
                                 />
                             </div>
 
                             {/* Options */}
-                            <div className="space-y-3">
-                                <div className="space-y-2">
-                                    <label className="text-sm font-medium">Min Word Length: {minWordLength}</label>
+                            <div className="space-y-2">
+                                <div className="space-y-1">
+                                    <label className="text-xs font-medium">Min Word Length: {minWordLength}</label>
                                     <input
                                         type="range"
                                         min="1"
@@ -153,7 +153,7 @@ export default function KeywordDensityPage() {
                                         onChange={(e) => setExcludeStopWords(e.target.checked)}
                                         className="h-4 w-4 rounded border-gray-300"
                                     />
-                                    <label htmlFor="stopWords" className="text-sm font-medium">
+                                    <label htmlFor="stopWords" className="text-xs font-medium">
                                         Exclude common stop words
                                     </label>
                                 </div>

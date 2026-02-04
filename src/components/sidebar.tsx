@@ -54,20 +54,6 @@ const bottomNavItems = [
         badge: { text: "HOT", variant: "destructive" as const }
     },
     {
-        title: "VIP Benefits",
-        href: "/vip-benefits",
-        icon: Gem,
-        badge: { text: "VIP", variant: "secondary" as const }
-    },
-    { title: "The Vault", href: "/vault", icon: Vault },
-    { title: "VIP Success Stories", href: "/success-stories", icon: Trophy },
-    {
-        title: "VIP Pricing",
-        href: "/pricing",
-        icon: DollarSign,
-        badge: { text: "$35", variant: "outline" as const }
-    },
-    {
         title: "Donate",
         href: "/donate",
         icon: Heart,
@@ -96,71 +82,44 @@ const categories = [
     {
         title: "Telegram/Discord",
         icon: MessageSquare,
-        count: 5,
+        count: 4,
         items: [
             { title: "Webhook Sender", href: "/telegram-discord/webhook-sender" },
             { title: "Invite Generator", href: "/telegram-discord/invite-generator" },
             { title: "Timestamp", href: "/telegram-discord/timestamp" },
             { title: "Embed Builder", href: "/telegram-discord/embed-builder" },
-            { title: "DM Templates", href: "/telegram-discord/dm-templates" },
         ]
     },
     {
         title: "Utility Tools",
         icon: Wrench,
-        count: 14,
+        count: 5,
         items: [
             { title: "Fake Address", href: "/utility/fake-address" },
             { title: "Short URL", href: "/utility/short-url" },
             { title: "Temp Mail", href: "/utility/temp-mail" },
             { title: "Password Gen", href: "/utility/password-gen" },
             { title: "QR Generator", href: "/utility/qr-generator" },
-            { title: "Hash Generator", href: "/utility/hash-generator" },
-            { title: "Lorem Ipsum", href: "/utility/lorem-ipsum" },
-            { title: "Base64", href: "/utility/base64" },
-            { title: "JSON Formatter", href: "/utility/json-formatter" },
-            { title: "Color Picker", href: "/utility/color-picker" },
-            { title: "UUID Generator", href: "/utility/uuid-generator" },
-            { title: "Timestamp", href: "/utility/timestamp" },
-            { title: "IP Tools", href: "/utility/ip-tools" },
-            { title: "Text Case", href: "/utility/text-case" },
         ]
     },
-    {
-        title: "Document Tools",
-        icon: FileText,
-        count: 5,
-        items: [
-            { title: "Resume Builder", href: "/document/resume-builder" },
-            { title: "Invoice Generator", href: "/document/invoice-generator" },
-            { title: "Certificate", href: "/document/certificate" },
-            { title: "Letter Generator", href: "/document/letter-generator" },
-            { title: "Agreement", href: "/document/agreement" },
-        ]
-    },
+
     {
         title: "Image Tools",
         icon: Image,
-        count: 5,
+        count: 2,
         items: [
             { title: "Compressor", href: "/image/compressor" },
             { title: "Resizer", href: "/image/resizer" },
-            { title: "Watermark", href: "/image/watermark" },
-            { title: "Image to Base64", href: "/image/image-to-base64" },
-            { title: "Screenshot", href: "/image/screenshot" },
         ]
     },
     {
         title: "Social Tools",
         icon: Share2,
-        count: 6,
+        count: 3,
         items: [
-            { title: "Fake Tweet", href: "/social/fake-tweet" },
-            { title: "Username Gen", href: "/social/username-gen" },
-            { title: "Bio Generator", href: "/social/bio-generator" },
-            { title: "Instagram Post", href: "/social/instagram-post" },
+            { title: "Username Gen", href: "/tools/username-gen" },
+            { title: "Bio Generator", href: "/tools/bio-generator" },
             { title: "Hashtag Gen", href: "/social/hashtag-gen" },
-            { title: "Social Proof", href: "/social/social-proof" },
         ]
     },
     {
@@ -188,7 +147,7 @@ export function Sidebar() {
     return (
         <div className="flex h-full flex-col bg-background">
             <ScrollArea className="flex-1 px-3">
-                <div className="space-y-1 py-4">
+                <div className="space-y-1 pt-4 pb-2">
                     {/* Main nav items */}
                     {mainNavItems.map((item) => (
                         <Link
@@ -258,14 +217,14 @@ export function Sidebar() {
                     ))}
                 </div>
 
-                <Separator className="my-4" />
+                <Separator className="my-2" />
 
                 {/* Categories Section */}
-                <div className="space-y-1 pb-4">
+                <div className="space-y-1">
                     <h3 className="px-3 text-xs font-semibold uppercase text-muted-foreground">
                         Categories
                     </h3>
-                    <div className="mt-2 space-y-1">
+                    <div className="mt-1 space-y-1">
                         {categories.map((category) => (
                             <Collapsible
                                 key={category.title}

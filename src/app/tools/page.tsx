@@ -53,71 +53,44 @@ const toolCategories = [
     {
         title: "Telegram/Discord",
         icon: MessageSquare,
-        count: 5,
+        count: 4,
         tools: [
             { name: "Webhook Sender", description: "Discord webhooks", isNew: true },
             { name: "Invite Generator", description: "Discord invites", isNew: true },
             { name: "Timestamp", description: "Discord timestamps", isNew: true },
             { name: "Embed Builder", description: "Discord embeds", isNew: true },
-            { name: "DM Templates", description: "Mass DM templates", isNew: true },
         ]
     },
     {
         title: "Utility Tools",
         icon: Wrench,
-        count: 14,
-        tools: [
-            { name: "Fake Address", description: "Random addresses", isNew: false },
-            { name: "Short URL", description: "Shorten links", isNew: false },
-            { name: "Temp Mail", description: "Disposable email", isNew: false },
-            { name: "Password Gen", description: "Strong passwords", isNew: false },
-            { name: "QR Generator", description: "Create QR codes", isNew: true },
-            { name: "Hash Generator", description: "MD5, SHA hashes", isNew: true },
-            { name: "Lorem Ipsum", description: "Placeholder text", isNew: true },
-            { name: "Base64", description: "Encode/decode", isNew: true },
-            { name: "JSON Formatter", description: "Beautify JSON", isNew: true },
-            { name: "Color Picker", description: "Color converter", isNew: true },
-            { name: "UUID Generator", description: "Generate UUIDs", isNew: true },
-            { name: "Timestamp", description: "Unix converter", isNew: true },
-            { name: "IP Tools", description: "IP address info", isNew: true },
-            { name: "Text Case", description: "Case converter", isNew: true },
-        ]
-    },
-    {
-        title: "Document Tools",
-        icon: FileText,
         count: 5,
         tools: [
-            { name: "Resume Builder", description: "Create resumes", isNew: true },
-            { name: "Invoice Generator", description: "Business invoices", isNew: true },
-            { name: "Certificate", description: "Certificates", isNew: true },
-            { name: "Letter Generator", description: "Formal letters", isNew: true },
-            { name: "Agreement", description: "Contracts", isNew: true },
+            { name: "Fake Address", description: "Random addresses", isNew: false, href: "/tools/fake-address" },
+            { name: "Short URL", description: "Shorten links", isNew: false, href: "/tools/url-shortener" },
+            { name: "Temp Mail", description: "Disposable email", isNew: false, href: "/tools/temp-mail" },
+            { name: "Password Gen", description: "Strong passwords", isNew: false, href: "/tools/password-gen" },
+            { name: "QR Generator", description: "Create QR codes", isNew: true, href: "/tools/qr-generator" },
         ]
     },
+
     {
         title: "Image Tools",
         icon: ImageIcon,
-        count: 5,
+        count: 2,
         tools: [
-            { name: "Compressor", description: "Compress images", isNew: true },
-            { name: "Resizer", description: "Resize images", isNew: true },
-            { name: "Watermark", description: "Add watermarks", isNew: true },
-            { name: "Image to Base64", description: "Convert to Base64", isNew: true },
-            { name: "Screenshot", description: "Beautify screenshots", isNew: true },
+            { name: "Compressor", description: "Compress images", isNew: true, href: "/tools/image-compressor" },
+            { name: "Resizer", description: "Resize images", isNew: true, href: "/tools/image-resizer" },
         ]
     },
     {
         title: "Social Tools",
         icon: Share2,
-        count: 6,
+        count: 3,
         tools: [
-            { name: "Fake Tweet", description: "Generate tweets", isNew: true },
-            { name: "Username Gen", description: "Username ideas", isNew: true },
-            { name: "Bio Generator", description: "Social bios", isNew: true },
-            { name: "Instagram Post", description: "Fake IG posts", isNew: true },
+            { name: "Username Gen", description: "Username ideas", isNew: true, href: "/tools/username-gen" },
+            { name: "Bio Generator", description: "Social bios", isNew: true, href: "/tools/bio-generator" },
             { name: "Hashtag Gen", description: "Generate hashtags", isNew: true },
-            { name: "Social Proof", description: "Proof screenshots", isNew: true },
         ]
     },
     {
